@@ -10,8 +10,14 @@ btnSubmit.addEventListener('click', (e) => {
     if (userAnwser != anwser.correctAnwser) {
       response.textContent = 'Resposta errada!'
       document.body.appendChild(response)
+      document.getElementById('Brasil').disabled = true;
+      document.getElementById('Italia').disabled = true;
+      document.getElementById('Inglaterra').disabled = true;
     } else {
       response.textContent = 'Resposta correta!'
       document.body.appendChild(response)
+      document.getElementById('Brasil').disabled = true;
+      document.getElementById('Italia').disabled = true;
+      document.getElementById('Inglaterra').disabled = true;
     }
 })
