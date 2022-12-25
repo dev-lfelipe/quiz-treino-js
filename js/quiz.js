@@ -15,17 +15,18 @@ btnSubmit.addEventListener('click', (e) => {
     const response = document.createElement("h1")
     const userAnwser = form.q1.value
     if (userAnwser != answer.correctAnwser) {
-      response.textContent = 'Resposta errada!'
-      document.body.appendChild(response)
-      document.getElementById(answer.options.a).disabled = true;
-      document.getElementById(answer.options.b).disabled = true;
-      document.getElementById(answer.options.c).disabled = true;
+        response.textContent = 'Resposta errada!'
+        document.body.appendChild(response)
+        document.getElementById(answer.options.a).disabled = true;
+        document.getElementById(answer.options.b).disabled = true;
+        document.getElementById(answer.options.c).disabled = true;
+        document.querySelector('.myButton').disabled = true;
     } else {
-      response.textContent = 'Resposta correta!'
-      document.body.appendChild(response)
-      document.getElementById(answer.options.a).disabled = true;
-      document.getElementById(answer.options.b).disabled = true;
-      document.getElementById(answer.options.c).disabled = true;
-
+        response.textContent = 'Resposta correta!'
+        document.body.appendChild(response)
+        document.getElementById(answer.options.a).disabled = true;
+        document.getElementById(answer.options.b).disabled = true;
+        document.getElementById(answer.options.c).disabled = true;
+        document.querySelector('.myButton').disabled = true;
     }
 })
