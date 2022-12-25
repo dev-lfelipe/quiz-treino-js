@@ -13,11 +13,13 @@ btnSubmit.addEventListener('click', (e) => {
       document.getElementById('Brasil').disabled = true;
       document.getElementById('Italia').disabled = true;
       document.getElementById('Inglaterra').disabled = true;
+      document.querySelector('.myButton').disabled = true;
     } else {
       response.innerHTML = '<h1>Resposta correta!</h1>'
       document.body.appendChild(response)
       document.getElementById('Brasil').disabled = true;
       document.getElementById('Italia').disabled = true;
       document.getElementById('Inglaterra').disabled = true;
+      document.querySelector('.myButton').disabled = true;
     }
 })
