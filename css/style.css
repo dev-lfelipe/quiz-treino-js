@@ -22,6 +22,20 @@ h1{
 	text-decoration: underline;
 }
 
+.status__barra__progresso {
+	width: 100%;
+	background-color: #ddd;
+}
+
+#barra__progresso{
+	width: 1%;
+	height: 35px;
+	background-color: #4CAF50;
+	text-align: center;
+	line-height: 32px;
+	color: black;
+}
+
 /* CSS das questões */
 
 .radio__buttons{
@@ -64,6 +78,6 @@ h1{
 	margin: 20px;
 }
 
-.carousel__titulo--sub{
+.carousel__subtitulo{
 	font-size: 18px;
 }

@@ -1,3 +1,27 @@
+function contadorQuest(){
+    var contador = 0;
+    var questaoRespondida = 0;
+
+    if(questaoRespondida < 5){
+        contador++
+    }
+}
+
+function barraProgresso() {
+    var element = document.getElementById("barra__progresso");   
+    var width = 1;
+    var questoes = setInterval(progresso, 100);
+    function progresso() {
+    if (width >= 100) {
+        clearInterval(questoes);
+    } else {
+        width++; 
+        element.style.width = width + '%'; 
+        element.innerHTML = width * 1  + '%';
+    }
+    }
+}
+
 const form = document.querySelector('#form')
 const btnSubmit = document.querySelector('.myButton')
 
