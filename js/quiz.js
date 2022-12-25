@@ -1,7 +1,6 @@
 const form = document.querySelector('#form')
 const btnSubmit = document.querySelector('.myButton')
 
-
 const answer = {
     name: "q1",
     options: {
@@ -15,7 +14,7 @@ btnSubmit.addEventListener('click', (e) => {
     e.preventDefault();
     const response = document.createElement("h1")
     const userAnwser = form.q1.value
-    if (userAnwser != anwser.correctAnwser) {
+    if (userAnwser != answer.correctAnwser) {
       response.textContent = 'Resposta errada!'
       document.body.appendChild(response)
       document.getElementById(answer.options.a).disabled = true;
