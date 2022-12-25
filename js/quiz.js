@@ -5,17 +5,17 @@ const anwser = {name: "q1", correctAnwser: "Inglaterra"}
 
 btnSubmit.addEventListener('click', (e) => {
     e.preventDefault();
-    const response = document.createElement("p")
+    const response = document.createElement("h1")
     const userAnwser = form.q1.value
     if (userAnwser != anwser.correctAnwser) {
-      response.innerHTML = '<h1>Resposta errada!</h1>'
+      response.textContent = 'Resposta errada!'
       document.body.appendChild(response)
       document.getElementById('Brasil').disabled = true;
       document.getElementById('Italia').disabled = true;
       document.getElementById('Inglaterra').disabled = true;
       document.querySelector('.myButton').disabled = true;
     } else {
-      response.innerHTML = '<h1>Resposta correta!</h1>'
+      response.textContent = 'Resposta correta!'
       document.body.appendChild(response)
       document.getElementById('Brasil').disabled = true;
       document.getElementById('Italia').disabled = true;
