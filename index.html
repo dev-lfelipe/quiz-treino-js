@@ -12,18 +12,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Quiz Raiz</h1>
-    <form id="form" action="">
-        <p>Quem foi o ganhador da Copa do Mundo de 1966?</p>
-        <ul>
-            <li><input type="radio" name="q1" id="Inglaterra" value="Inglaterra">Inglaterra</li>
-            <li><input type="radio" name="q1" id="Brasil" value="Brasil">Brasil</li>
-            <li><input type="radio" name="q1" id="Italia" value="Itália">Itália</li>
-        </ul>
-        <button class="myButton">Responder</button>
-    </form>
+    <section>
+        <div class="carousel__wrapper carousel__wrapper--sec">
+            <div class="carousel">
+                <div class="progresso">
+                    <div class="progresso__interior" data-progress=""></div>
+                </div>
+                <form id="form" action="">
+                    <h1>Quiz Raiz</h1>
+                    <p>Quem foi o ganhador da Copa do Mundo de 1966?</p>
+                    <ul>
+                        <li><input type="radio" name="q1" id="Inglaterra" value="Inglaterra">Inglaterra</li>
+                        <li><input type="radio" name="q1" id="Brasil" value="Brasil">Brasil</li>
+                        <li><input type="radio" name="q1" id="Italia" value="Itália">Itália</li>
+                    </ul>
+                    <button class="myButton">Responder</button>
+                </form>
+                <a class="carousel__nav" href="#" style="display: none;">←</a> <a class="nav--buttons nav--buttons--right" href="#" style="display: none;">→</a>
+            </div>
+        </div>
+    </section>
 </body>
-
-
 <script src="./js/quiz.js"></script>
 </html>
