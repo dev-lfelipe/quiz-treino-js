@@ -39,6 +39,13 @@ btnSubmit.addEventListener('click', (e) => {
     const response = document.createElement("h1")
     const userAnwser = form.q1.value
     if (userAnwser != answer.correctAnwser) {
+        /*var textoRes = document.createElement("h1");
+        var conteudoRes = document.createTextNode("Resposta errada!");
+        textoRes.appendChild(conteudoRes); 
+        
+        var textoResultado = document.getElementById("resultado");
+        document.body.insertBefore(textoRes, textoResultado.nextSibling);*/
+
         response.textContent = 'Resposta errada!'
         document.body.appendChild(response)
         document.getElementById(answer.options.a).disabled = true;
@@ -52,5 +59,14 @@ btnSubmit.addEventListener('click', (e) => {
         document.getElementById(answer.options.b).disabled = true;
         document.getElementById(answer.options.c).disabled = true;
         document.querySelector('.myButton').disabled = true;
+    } 
+
+    if ((document.getElementById('Inglaterra').checked == false) && (document.getElementById('Brasil').checked == false) && (document.getElementById('Italia').checked == false)){
+        response.textContent = 'Você precisa selecionar uma resposta!'
+        document.getElementById(answer.options.a).disabled = false;
+        document.getElementById(answer.options.b).disabled = false;
+        document.getElementById(answer.options.c).disabled = false;
+        document.querySelector('.myButton').disabled = false;
+        document.body.appendChild(response)
     }
 })
