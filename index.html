@@ -13,22 +13,38 @@
 </head> 
 <body>
     <section>
-        <div class="carousel__wrapper carousel__wrapper--sec">
+        <div>
+            <h1>Quiz Raiz</h1>
+        </div>
+    </section>
+    <section>
+        <div>
             <div class="carousel">
-                <div class="progresso">
-                    <div class="progresso__interior" data-progress=""></div>
+                <div class="status__barra__progresso">
+                    <div class="barra__progresso"></div>
                 </div>
-                <form id="form" action="">
-                    <h1>Quiz Raiz</h1>
-                    <p>Quem foi o ganhador da Copa do Mundo de 1966?</p>
-                    <ul>
-                        <li><input type="radio" name="q1" id="Inglaterra" value="Inglaterra">Inglaterra</li>
-                        <li><input type="radio" name="q1" id="Brasil" value="Brasil">Brasil</li>
-                        <li><input type="radio" name="q1" id="Italia" value="Itália">Itália</li>
-                    </ul>
-                    <button class="myButton">Responder</button>
+                <form id="form" class="carousel__conteudo" style="width: 1800%; transform: translate(0%, 0px);">
+                    <div class="carousel__item" style="width: 5.55556%;">
+                        <p class="carousel__titulo">Questão 1</p>
+                        <p class="carousel__titulo carousel__titulo--sub">Quem foi o ganhador da Copa do Mundo de 1966?</p>
+                        <ul class="radio__buttons">
+                            <li class="radio__item"><input type="radio" name="q1" id="Inglaterra" value="Inglaterra">Inglaterra</li>
+                            <li class="radio__item"><input type="radio" name="q1" id="Brasil" value="Brasil">Brasil</li>
+                            <li class="radio__item"><input type="radio" name="q1" id="Italia" value="Itália">Itália</li>
+                        </ul>
+                        <button class="myButton">Responder</button>
+                    </div>
+                    <div class="carousel__item" style="width: 5.55556%;">
+                        <p class="carousel__titulo">Questão 1</p>
+                        <p class="carousel__titulo carousel__titulo--sub">Quem foi o ganhador da Copa do Mundo de 1966?</p>
+                        <ul class="radio__buttons">
+                            <li class="radio__item"><input type="radio" name="q1" id="Inglaterra" value="Inglaterra">Inglaterra</li>
+                            <li class="radio__item"><input type="radio" name="q1" id="Brasil" value="Brasil">Brasil</li>
+                            <li class="radio__item"><input type="radio" name="q1" id="Italia" value="Itália">Itália</li>
+                        </ul>
+                        <button class="myButton">Responder</button>
+                    </div>
                 </form>
-                <a class="carousel__nav" href="#" style="display: none;">←</a> <a class="nav--buttons nav--buttons--right" href="#" style="display: none;">→</a>
             </div>
         </div>
     </section>

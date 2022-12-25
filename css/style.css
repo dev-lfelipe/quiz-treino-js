@@ -4,7 +4,6 @@ body{
     color: #FFFFFF;
 	margin: 10px;
 	height: 100vh;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -17,13 +16,24 @@ body{
 	gap: 10px;
 }
 
-ul, ol, li{
+h1{
+	margin: 20px 25px;
+	font-size: 30px;
+	text-decoration: underline;
+}
+
+/* CSS das questões */
+
+.radio__buttons{
     list-style: none;
     font-size: 20px;
     margin: 10px;
 }
 
-
+.radio__item{
+	display: inline;
+	margin: 0px 0px 0px 40px;
+}
 
 .myButton {
 	background-color:#f0b22d;
@@ -35,8 +45,7 @@ ul, ol, li{
 	font-size:18px;
 	font-weight:bold;
 	padding:10px 39px;
-	
-	
+	margin: 10px;
 	height: 50px;
 	width: 100%;
 }
@@ -48,12 +57,13 @@ ul, ol, li{
 	top:1px;
 }
 
-h1{
-	margin: 20px 25px;
-	font-size: 30px;
-	text-decoration: underline;
+/* CSS do Carrossel */
+
+.carousel__titulo{
+	font-size: 25px;
+	margin: 20px;
 }
 
-p{
-	font-size: 20px;
+.carousel__titulo--sub{
+	font-size: 18px;
 }
