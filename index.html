@@ -19,34 +19,27 @@
     </section>
     <section>
         <div>
-            <div class="carousel">
-                <div class="status__barra__progresso">
-                    <div id="barra__progresso"></div>
-                </div>
-                <form id="form" class="carousel__conteudo">
-                    <div class="carousel__item">
-                        <p class="carousel__titulo">Questão 1</p>
-                        <p class="carousel__titulo carousel__subtitulo">Quem foi o ganhador da Copa do Mundo de 1966?</p>
-                        <ul class="radio__buttons">
-                            <li class="radio__item"><input type="radio" name="q1" id="Inglaterra" value="Inglaterra">Inglaterra</li>
-                            <li class="radio__item"><input type="radio" name="q1" id="Brasil" value="Brasil">Brasil</li>
-                            <li class="radio__item"><input type="radio" name="q1" id="Italia" value="Itália">Itália</li>
-                        </ul>
-                        <button class="myButton" onclick="barraProgresso()">Responder</button>
-                        <p id="resultado"></p>
-                    </div>
-                    <!--<div class="carousel__item">
-                        <p class="carousel__titulo">Questão 1</p>
-                        <p class="carousel__titulo carousel__subtitulo">Quem foi o ganhador da Copa do Mundo de 1966?</p>
-                        <ul class="radio__buttons">
-                            <li class="radio__item"><input type="radio" name="q1" id="Inglaterra" value="Inglaterra">Inglaterra</li>
-                            <li class="radio__item"><input type="radio" name="q1" id="Brasil" value="Brasil">Brasil</li>
-                            <li class="radio__item"><input type="radio" name="q1" id="Italia" value="Itália">Itália</li>
-                        </ul>
-                        <button class="myButton">Responder</button>
-                    </div>-->
-                </form>
+            <div class="status__barra__progresso">
+                <div id="barra__progresso"></div>
             </div>
+            <form id="form">
+                <div class="resultado">
+
+                </div>
+                <div class="question-container" id="question">
+                    Local da questão
+                </div>
+                <div class="option-container">
+                    <input type="radio" class="option" name="questao" id="op1" onclick="">Opção 1</input>
+                    <input type="radio" class="option" name="questao" id="op2">Opção 2</input>
+                    <input type="radio" class="option" name="questao" id="op3">Opção 3</input>
+                    <input type="radio" class="option" name="questao" id="op4">Opção 4</input>
+                </div>
+                <div class="navigation">
+                    <button class="next">Próxima</button>
+                    <button class="previous">Anterior</button>
+                </div>
+            </form>
         </div>
     </section>
 </body>
