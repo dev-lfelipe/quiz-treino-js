@@ -49,7 +49,7 @@ h1{
 	margin: 0px 0px 0px 40px;
 }
 
-.myButton {
+button {
 	background-color:#f0b22d;
 	border-radius: 12px;
 	border: none;

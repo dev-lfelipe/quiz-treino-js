@@ -67,31 +67,31 @@ btnSubmit.addEventListener('click', (e) => {
 
 const Questions = [{
     id: 0,
-    q: "What is capital of India?",
-    a: [{ text: "gandhinagar", isCorrect: false },
-        { text: "Surat", isCorrect: false },
-        { text: "Delhi", isCorrect: true },
-        { text: "mumbai", isCorrect: false }
+    q: "Qual foi a seleção campeã da Copa do Mundo de 1966?",
+    a: [{ text: "Itália", isCorrect: false },
+        { text: "Brasil", isCorrect: false },
+        { text: "Inglaterra", isCorrect: true },
+        { text: "Uruguai", isCorrect: false }
     ]
 
 },
 {
     id: 1,
-    q: "What is the capital of Thailand?",
-    a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-        { text: "phuket", isCorrect: false },
-        { text: "Ayutthaya", isCorrect: false },
-        { text: "Bangkok", isCorrect: true }
+    q: "Qual o nome verdadeiro do Homem-Aranha?",
+    a: [{ text: "Clark Kent", isCorrect: false, isSelected: false },
+        { text: "Kanye West", isCorrect: false },
+        { text: "Bruce Wayne", isCorrect: false },
+        { text: "Peter Parker", isCorrect: true }
     ]
 
 },
 {
     id: 2,
-    q: "What is the capital of Gujarat",
-    a: [{ text: "surat", isCorrect: false },
-        { text: "vadodara", isCorrect: false },
-        { text: "gandhinagar", isCorrect: true },
-        { text: "rajkot", isCorrect: false }
+    q: "Qual a capital do Acre?",
+    a: [{ text: "Brasília", isCorrect: false },
+        { text: "Pernambuco", isCorrect: false },
+        { text: "Rio Branco", isCorrect: true },
+        { text: "Itaberá", isCorrect: false }
     ]
 
 }
@@ -114,32 +114,37 @@ function iterate(id) {
     question.innerText = Questions[id].q;
     
     // Pegando as opções
-    const op1 = document.getElementById("op1");
-    const op2 = document.getElementById('op2');
-    const op3 = document.getElementById('op3');
-    const op4 = document.getElementById('op4');
+    const op = [
+        document.getElementById("op1"),
+        document.getElementById('op2'),
+        document.getElementById('op3'),
+        document.getElementById('op4')
+    ];
+
     
-    const option1 = document.getElementById('option1');
-    const option2 = document.getElementById('option2');
-    const option3 = document.getElementById('option3');
-    const option4 = document.getElementById('option4');
+    const Opcoes = [
+        document.getElementById('option1'),
+        document.getElementById('option2'),
+        document.getElementById('option3'),
+        document.getElementById('option4'),  
+    ];    
     
     // Definindo o texto das questões
-    op1.innerText = Questions[id].a[0].text;
-    op2.innerText = Questions[id].a[1].text;
-    op3.innerText = Questions[id].a[2].text;
-    op4.innerText = Questions[id].a[3].text;
+    op[0].innerText = Questions[id].a[0].text;
+    op[1].innerText = Questions[id].a[1].text;
+    op[2].innerText = Questions[id].a[2].text;
+    op[3].innerText = Questions[id].a[3].text;
     
     // Definindo verdadeiro ou falso para as questões
-    option1.value = Questions[id].a[0].isCorrect;
-    option2.value = Questions[id].a[1].isCorrect;
-    option3.value = Questions[id].a[2].isCorrect;
-    option4.value = Questions[id].a[3].isCorrect;
+    Opcoes[0].value = Questions[id].a[0].isCorrect;
+    Opcoes[1].value = Questions[id].a[1].isCorrect;
+    Opcoes[2].value = Questions[id].a[2].isCorrect;
+    Opcoes[3].value = Questions[id].a[3].isCorrect;
     
     var selected = "";
     
     // Eventos para mostrar a seleção
-    option1.addEventListener("click", () => {
+    /*option1.addEventListener("click", () => {
         op1.style.color = "lightgoldenrodyellow";
         op2.style.color = "lightskyblue";
         op3.style.color = "lightskyblue";
@@ -169,7 +174,7 @@ function iterate(id) {
         op3.style.color = "lightskyblue";
         op4.style.color = "lightgoldenrodyellow";
         selected = option4.value;
-    })
+    })*/
     
     // Pegando o botão de verificação
     const evaluate = document.getElementsByClassName("evaluate");
@@ -185,6 +190,40 @@ function iterate(id) {
             result[0].style.color = "red";
         }
     })
+
+    if (Questions[id].a[0].isCorrect){
+        Opcoes[0].addEventListener("click", () => {
+            op[0].style.color = "green";
+
+            selected = Opcoes[0].value;
+        })
+    } else {
+        Opcoes[0].addEventListener("click", () => {
+            op[0].style.color = "red";
+
+            selected = Opcoes[0].value;
+        })
+    }
+
+    
+    /*for(let contador = 0; contador < Opcoes.length; contador++){
+        const opcaoSelecionada = Opcoes[contador];
+
+        if (Questions[id].a.isCorrect){
+            opcaoSelecionada.addEventListener("click", () => {
+                op[0].style.color = "green";
+    
+                selected = Opcoes[0].value;
+            })
+        } else {
+            opcaoSelecionada.addEventListener("click", () => {
+                op[0].style.color = "red";
+    
+                selected = Opcoes[0].value;
+            })
+        }
+
+    }*/
 }
 
 if (start) {
