@@ -120,6 +120,10 @@ function iterate(id) {
     const op3 = document.getElementById('op3');
     const op4 = document.getElementById('op4');
     
+    const option1 = document.getElementById('option1');
+    const option2 = document.getElementById('option2');
+    const option3 = document.getElementById('option3');
+    const option4 = document.getElementById('option4');
     
     // Providing option text 
     op1.innerText = Questions[id].a[0].text;
@@ -128,48 +132,47 @@ function iterate(id) {
     op4.innerText = Questions[id].a[3].text;
     
     // Providing the true or false value to the options
-    op1.value = Questions[id].a[0].isCorrect;
-    op2.value = Questions[id].a[1].isCorrect;
-    op3.value = Questions[id].a[2].isCorrect;
-    op4.value = Questions[id].a[3].isCorrect;
+    option1.value = Questions[id].a[0].isCorrect;
+    option2.value = Questions[id].a[1].isCorrect;
+    option3.value = Questions[id].a[2].isCorrect;
+    option4.value = Questions[id].a[3].isCorrect;
     
     var selected = "";
     
     // Show selection for op1
-    op1.addEventListener("checked", () => {
-        console.log("op1")
-        op1.style.backgroundColor = "lightgoldenrodyellow";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightskyblue";
-        selected = op1.value;
+    option1.addEventListener("click", () => {
+        op1.style.color = "lightgoldenrodyellow";
+        op2.style.color = "lightskyblue";
+        op3.style.color = "lightskyblue";
+        op4.style.color = "lightskyblue";
+        selected = option1.value;
     })
     
     // Show selection for op2
-    op2.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightgoldenrodyellow";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightskyblue";
-        selected = op2.value;
+    option2.addEventListener("click", () => {
+        op1.style.color = "lightskyblue";
+        op2.style.color = "lightgoldenrodyellow";
+        op3.style.color = "lightskyblue";
+        op4.style.color = "lightskyblue";
+        selected = option2.value;
     })
     
     // Show selection for op3
-    op3.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightgoldenrodyellow";
-        op4.style.backgroundColor = "lightskyblue";
-        selected = op3.value;
+    option3.addEventListener("click", () => {
+        op1.style.color = "lightskyblue";
+        op2.style.color = "lightskyblue";
+        op3.style.color = "lightgoldenrodyellow";
+        op4.style.color = "lightskyblue";
+        selected = option3.value;
     })
     
     // Show selection for op4
-    op4.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightgoldenrodyellow";
-        selected = op4.value;
+    option4.addEventListener("click", () => {
+        op1.style.color = "lightskyblue";
+        op2.style.color = "lightskyblue";
+        op3.style.color = "lightskyblue";
+        op4.style.color = "lightgoldenrodyellow";
+        selected = option4.value;
     })
     
     // Grabbing the evaluate button
