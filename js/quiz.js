@@ -98,23 +98,22 @@ const Questions = [{
 
 ]
 
-// Set start
 var start = true;
 
-// Iterate
+// Interação
 function iterate(id) {
-    // Getting the result display section
+    // Pegando o display da div resultado
     var result = document.getElementsByClassName("resultado");
     result[0].innerText = "";
     
-    // Getting the question
+    // Pegando a questão
     const question = document.getElementById("question");
     
     
-    // Setting the question text
+    // Pegando o texto da questão
     question.innerText = Questions[id].q;
     
-    // Getting the options
+    // Pegando as opções
     const op1 = document.getElementById("op1");
     const op2 = document.getElementById('op2');
     const op3 = document.getElementById('op3');
@@ -125,13 +124,13 @@ function iterate(id) {
     const option3 = document.getElementById('option3');
     const option4 = document.getElementById('option4');
     
-    // Providing option text 
+    // Definindo o texto das questões
     op1.innerText = Questions[id].a[0].text;
     op2.innerText = Questions[id].a[1].text;
     op3.innerText = Questions[id].a[2].text;
     op4.innerText = Questions[id].a[3].text;
     
-    // Providing the true or false value to the options
+    // Definindo verdadeiro ou falso para as questões
     option1.value = Questions[id].a[0].isCorrect;
     option2.value = Questions[id].a[1].isCorrect;
     option3.value = Questions[id].a[2].isCorrect;
@@ -139,7 +138,7 @@ function iterate(id) {
     
     var selected = "";
     
-    // Show selection for op1
+    // Eventos para mostrar a seleção
     option1.addEventListener("click", () => {
         op1.style.color = "lightgoldenrodyellow";
         op2.style.color = "lightskyblue";
@@ -148,7 +147,6 @@ function iterate(id) {
         selected = option1.value;
     })
     
-    // Show selection for op2
     option2.addEventListener("click", () => {
         op1.style.color = "lightskyblue";
         op2.style.color = "lightgoldenrodyellow";
@@ -157,7 +155,6 @@ function iterate(id) {
         selected = option2.value;
     })
     
-    // Show selection for op3
     option3.addEventListener("click", () => {
         op1.style.color = "lightskyblue";
         op2.style.color = "lightskyblue";
@@ -166,7 +163,6 @@ function iterate(id) {
         selected = option3.value;
     })
     
-    // Show selection for op4
     option4.addEventListener("click", () => {
         op1.style.color = "lightskyblue";
         op2.style.color = "lightskyblue";
@@ -175,10 +171,10 @@ function iterate(id) {
         selected = option4.value;
     })
     
-    // Grabbing the evaluate button
+    // Pegando o botão de verificação
     const evaluate = document.getElementsByClassName("evaluate");
     
-    // Evaluate method
+    // O método para verificar
     evaluate[0].addEventListener("click", (event) => {
         event.preventDefault();
         if (selected == "true") {
@@ -195,7 +191,7 @@ if (start) {
     iterate("0");
 }
 
-// Next button and method
+// Botão next e seu método
 const next = document.getElementsByClassName('next')[0];
 var id = 0;
 
